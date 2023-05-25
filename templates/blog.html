@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select blog</title>
+    <style>
+div {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+</style>
+</head>
+
+<body>
+<div>
+Select blog: <br><br>
+
+<form method="post" action="{% url 'blog' %}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Select">
+</form>
+
+<br><br>
+Blog publications: <br><br>
+{% for key, value in blogs.items %}
+Blog # {{ key }}: {{ value.title }} <br>
+{% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <style>
+div {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+</style>
+</head>
+
+<body>
+<div>
+    <b>{{ blog.title }}</b>
+    <br>
+    <i>(updated at {{ blog.updated_at }})</i>
+    <br><br>
+    {{ blog.content }}
+</div>
+</body>
+
+</html>
