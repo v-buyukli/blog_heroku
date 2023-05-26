@@ -10,8 +10,11 @@
 
 <body>
 
-    {{ context }} <br><br>
-    <a href="{% url 'blog' %}">Select blog</a> <br>
+    <b>{{ blog.title }}</b>
+    <br>
+    <i>(updated at {{ blog.updated_at }})</i>
+    <br><br>
+    {{ blog.content }}
 
 </body>
 
