@@ -20,7 +20,6 @@ def get_blog(request):
             return HttpResponseRedirect(reverse("blog_view", args=[blog_id]))
     else:
         form = BlogForm()
-
     context = {
         "form": form,
         "blogs": blogs,
@@ -34,4 +33,3 @@ def blog_view(request, blog_id):
     except KeyError:
         return HttpResponseRedirect(reverse("blog"))
     return render(request, "blog_view.html", {"blog": blog})
-

@@ -1,4 +1,4 @@
-# Blog
+# blog
 ____
 **Get started**
 
