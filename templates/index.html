@@ -1,2 +1,7 @@
 
 content
+
+Blog publications: <br><br>
+{% for key, value in blogs.items %}
+Blog # {{ key }}: {{ value.title }} <br>
+{% endfor %}
