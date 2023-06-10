@@ -5,7 +5,7 @@ from blog.services import get_blogs
 
 
 class BlogForm(forms.Form):
-    blog_id = forms.IntegerField(label="Blog number (id)", min_value=1)
+    blog_id = forms.IntegerField(label="Blog number (id):", min_value=1)
 
     def clean_blog_id(self):
         blog_id = self.cleaned_data["blog_id"]

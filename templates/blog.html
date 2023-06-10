@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+
+{# Load the tag library #}
+{% load bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +19,16 @@
 <body>
 Select blog: <br><br>
 
-<form method="post" action="{% url 'blog' %}">
+<form method="post" action="{% url 'blog' %}" class="form">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Select">
+    <div class="col-md-2 centering">
+        {% bootstrap_form form %}
+    </div>
+    {% buttons %}
+    <button type="submit" class="btn btn-success">
+      Select
+    </button>
+  {% endbuttons %}
 </form>
 
 <br><br>
