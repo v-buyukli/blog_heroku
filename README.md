@@ -1,11 +1,10 @@
-# blog
-____
-**Get started**
+### Blog Heroku
+___
+**This repository is used to test Heroku pipelines.**  
 
-Clone repository
-
-Install requirements:
-    `pip install -r requirements.txt`
-
-Runserver command:
-    `python manage.py runserver`
+To run locally follow these steps:
+- сlone repository;
+- install requirements:
+    `pip install -r requirements.txt`;
+- runserver command:
+    `python manage.py runserver`.
